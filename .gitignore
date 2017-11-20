@@ -1,10 +1,12 @@
 node_modules
 /coverage
+.nuxt
+dist
 
 firebase-debug.log
 npm-debug.log
 package-lock.json
-yarn.lock
+# USE yarn.lock
 
 .firebaserc
 .DS_Store
