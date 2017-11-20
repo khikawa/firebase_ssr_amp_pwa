@@ -1,0 +1,13 @@
+node_modules
+/coverage
+
+firebase-debug.log
+npm-debug.log
+package-lock.json
+yarn.lock
+
+.firebaserc
+.DS_Store
+.idea
+*.iml
+*~
