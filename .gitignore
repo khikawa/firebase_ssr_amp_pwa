@@ -2,9 +2,12 @@ node_modules
 /coverage
 .nuxt
 dist
+build
 
 firebase-debug.log
 npm-debug.log
+yarn-error.log
+
 package-lock.json
 # USE yarn.lock
 

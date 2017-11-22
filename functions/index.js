@@ -1,7 +1,5 @@
-const functions = require('firebase-functions');
-const app = require('express')();
+const functions = require('firebase-functions')
 
-
-exports.httpFunction = functions.https.onRequest((request, response) => {
-  response.send("Hello from Firebase!");
-});
+exports.app = functions.https.onRequest((req, res) => {
+  res.status(200).send('OK')
+})
