@@ -3,11 +3,8 @@ import { Nuxt, Builder } from 'nuxt'
 
 import api from './api'
 
+const functions = require('firebase-functions');
 const app = express()
-const host = process.env.HOST || '127.0.0.1'
-const port = process.env.PORT || 3000
-
-app.set('port', port)
 
 // Import API Routes
 app.use('/api', api)
@@ -34,6 +31,18 @@ function handleRequest (req, res) {
 }
 
 app.use(handleRequest)
-app.listen(port, host)
-console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
-exports.app = app
+
+if (!process.env.FUNCTION_NAME) {
+  //On BackPack, Node
+  const host = process.env.HOST || '127.0.0.1'
+  const port = process.env.PORT || 3000
+  app.set('port', port)
+  app.listen(port, host)
+  console.log('LOG : Server listening on ' + host + ':' + port)
+}
+
+//On Firebase Functions
+export const cloudFunctionA = functions.https.onRequest((req, res) => {
+  res.status(200).send(JSON.stringify(!process.env.FUNCTION_NAME));
+});
+export const cloudFunctionApp = functions.https.onRequest(app)
