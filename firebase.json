@@ -8,12 +8,12 @@
     ],
     "rewrites": [
       {
-        "source": "**", "function": "httpFunction"
+        "source": "**", "function": "firebaseApp"
       }
     ]
   },
   "functions": {
-    "source": "functions"
+    "source": "src"
   },
   "firestore": {
     "rules": "firestore.rules",
