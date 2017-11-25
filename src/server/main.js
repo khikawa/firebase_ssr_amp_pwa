@@ -18,13 +18,13 @@ if (config.dev) {
 // Import API Routes
 app.use('/api', api)
 // Import Nuxt Routes
-app.use(async (req, res) => nuxt.render(req, res))
+app.use(nuxt.render)
 
 // Express Listend
-if (!process.env.FUNCTION_NAME) {
+if (process.env.HOST && process.env.PORT) {
   // On BackPack, Node
-  const host = process.env.HOST || '127.0.0.1'
-  const port = process.env.PORT || 3000
+  const host = process.env.HOST
+  const port = process.env.PORT
   app.set('port', port)
   app.listen(port, host)
 }
