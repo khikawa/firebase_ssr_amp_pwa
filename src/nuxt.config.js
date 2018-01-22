@@ -6,8 +6,8 @@ module.exports = {
   /*
   ** My Options (DEV)
   */
-  //loading: false,
-  //loading: '~/components/loading.vue',
+  // loading: false,
+  // loading: '~/components/loading.vue',
   /*
   ** Headers of the page
   */
