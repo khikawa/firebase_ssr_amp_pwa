@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "cross-env HOST=127.0.0.1 PORT=5000 backpack dev",
     "build": "nuxt build && backpack build",
-    "start": "cross-env HOST=127.0.0.1 PORT=5000 NODE_ENV=production node build/main.js",
+    "start": "cross-env HOST=127.0.0.1 PORT=5000 NODE_ENV=production GCLOUD_PROJECT=projectname node build/main.js",
     "lint": "eslint --ext .js,.vue --ignore-path ../.gitignore .",
     "serve": "firebase serve --only hosting,functions",
     "deploy": "firebase deploy"
   },
   "dependencies": {
+    "@google-cloud/debug-agent": "^2.3.2",
+    "@google-cloud/logging-winston": "^0.7.0",
+    "@google-cloud/trace-agent": "^2.4.1",
     "axios": "^0.17.1",
     "babel-eslint": "^8.2.1",
     "backpack-core": "^0.5.0",
@@ -25,8 +28,10 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue-libs": "^2.1.0",
     "express": "^4.16.2",
+    "express-winston": "^2.4.0",
     "firebase-admin": "~5.8.1",
     "firebase-functions": "^0.8.1",
-    "nuxt": "^1.1.1"
+    "nuxt": "^1.1.1",
+    "winston": "^2.4.0"
   }
 }

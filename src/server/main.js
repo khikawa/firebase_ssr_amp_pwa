@@ -1,3 +1,4 @@
+import logging from '../plugins/logging'
 import express from 'express'
 import api from './api'
 import { Nuxt, Builder } from 'nuxt'
@@ -15,10 +16,16 @@ if (config.dev) {
   builder.build()
 }
 
+// Add the request logger before anything else so that it can accurately log requests.
+app.use(logging.requestLogger)
+
 // Import API Routes
 app.use('/api', api)
 // Import Nuxt Routes
 app.use(nuxt.render)
+
+// Add the error logger after all middleware and routes so that it can log errors from the whole application. Any custom error handlers should go after this.
+app.use(logging.errorLogger)
 
 // Express Listend
 if (process.env.HOST && process.env.PORT) {
