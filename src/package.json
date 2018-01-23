@@ -31,7 +31,8 @@
     "express-winston": "^2.4.0",
     "firebase-admin": "~5.8.1",
     "firebase-functions": "^0.8.1",
-    "nuxt": "^1.1.1",
+    "nuxt": "1.0.0-rc11",
+    "source-map-support": "^0.5.2",
     "winston": "^2.4.0"
   }
 }

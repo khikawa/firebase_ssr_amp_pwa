@@ -3,7 +3,7 @@ module.exports = {
   /*
   ** Debug mode
   */
-  debug: true,
+  // debug: true,
 
   /*
   ** My Options (DEV)
