@@ -1,16 +1,16 @@
 module.exports = {
-  
+
   /*
   ** Debug mode
   */
   debug: true,
-  
+
   /*
   ** My Options (DEV)
   */
   // loading: false,
   // loading: '~/components/loading.vue',
-  
+
   /*
   ** Headers of the page
   */
