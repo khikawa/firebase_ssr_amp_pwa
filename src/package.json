@@ -33,6 +33,15 @@
     "firebase-functions": "^0.8.1",
     "nuxt": "1.0.0-rc11",
     "source-map-support": "^0.5.2",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "querystring": "^0.2.0",
+    "regenerator-runtime": "^0.11.1",
+    "vue": "2.4.4",
+    "vue-meta": "^1.4.2",
+    "vue-router": "^3.0.1",
+    "clone": "^2.1.1",
+    "core-js": "^2.5.3",
+    "debug": "^3.1.0",
+    "lodash": "^4.17.4"
   }
 }
