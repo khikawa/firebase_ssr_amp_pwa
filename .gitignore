@@ -11,6 +11,7 @@ yarn-error.log
 package-lock.json
 # USE yarn.lock
 
+sw.*
 .firebaserc
 .DS_Store
 .idea

@@ -10,6 +10,14 @@ module.exports = {
   */
   // loading: false,
   // loading: '~/components/loading.vue',
+  mode: 'spa',
+  modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/component-cache'
+  ],
+  workbox: {
+    dev: true
+  },
 
   /*
   ** Headers of the page
